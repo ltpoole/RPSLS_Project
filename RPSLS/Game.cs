@@ -21,7 +21,21 @@ namespace RPSLS
         //Member Methods (CAN DO)
         public void WelcomeMessage()
         {
-            Console.WriteLine("Welcome to RPSLS! Here are the rules:\n");
+            Console.WriteLine("Welcome to RPSLS! Here are the rules:\n" +
+                "Rock breaks Scissors\n" +
+                "Scissors slices Paper\n" +
+                "Paper smothers Rock\n" +
+                "Rock kills Lizard\n" +
+                "Lizard poisons Spock\n" +
+                "Spock trashes Scissors\n" +
+                "Scissors beheads Lizard\n" +
+                "Lizard eats Paper\n" +
+                "Paper weakens Spock\n" +
+                "Spock shatters Rock\n" +
+                "\n" +
+                "Winner will be declared by winning best out of 3!\n" +
+                "\n" +
+                "How many people are playing?");
         }
 
         public int ChooseNumberOfHumanPlayers()
