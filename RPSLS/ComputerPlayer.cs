@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    internal class HumanPlayer : Player
+    internal class ComputerPlayer : Player
     {
-        public HumanPlayer(string name) : base(name)
+        public ComputerPlayer(string name) : base(name)
         {
-        
         }
 
         public override void ChooseGesture()

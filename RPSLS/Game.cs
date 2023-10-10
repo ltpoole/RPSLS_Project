@@ -34,8 +34,7 @@ namespace RPSLS
                 "Spock shatters Rock\n" +
                 "\n" +
                 "Winner will be declared by winning best out of 3!\n" +
-                "\n" +
-                "How many people are playing?");
+                "\n");
             
 
         }
@@ -62,32 +61,27 @@ namespace RPSLS
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-            if(numberOfHumanPlayers == 1)
+            Console.WriteLine("Player One, what is your name?");
+            string playerName = Console.ReadLine();
+            this.playerOne = new HumanPlayer(playerName);
+            this.playerTwo = new HumanPlayer(playerName);
+
+            if (numberOfHumanPlayers == 1)
             {
-                this.playerOne = new HumanPlayer("JJ");
-                // this.playerTwo = new ComputerPlayer();
+                this.playerOne = new HumanPlayer("");
+                this.playerTwo = new ComputerPlayer("CPU");
             }
             else
             {
-                this.playerOne = new HumanPlayer("JJ");
-                this.playerTwo = new HumanPlayer("LaBorris");
+                this.playerOne = new HumanPlayer("");
+                this.playerTwo = new HumanPlayer("");
             }
 
         }
 
         public void CompareGestures()
         {
-            // TODO: Write the full game algorithm per the user story instructions
-            // TODO: Create the ComputerPlayer class (inherit from Player)
-            // TODO: Make sure to test!
-
-            // Step 1: Display welcome message and rules.
-            // Step 2: Ask user to select multiplayer or single player
-            // Step 3: Player 1 Selects their gesture
-            // Step 4: Player 2/CPU selects their gesture
-            // STep 5: Compare gestures to determine the winner of the round
-            // Step 6: 
-
+        
 
         }
 
@@ -98,9 +92,24 @@ namespace RPSLS
 
         public void RunGame()
         {
+            // TODO: Write the full game algorithm per the user story instructions
+            // TODO: Create the ComputerPlayer class (inherit from Player)
+            // TODO: Make sure to test!
+
+            // Step 1: Display welcome message and rules.
+            // Step 2: Ask user to select multiplayer or single player
+            // Step 3: Player 1 Selects their gesture
+            // Step 4: Player 2/CPU selects their gesture
+            // Step 5: Compare gestures to determine the winner of the round.
+            // Step 6: Add a score to the winner of each round.
+            // Step 7: Display game winner.
+
+
             WelcomeMessage();
             int numberOfHumanPlayers = ChooseNumberOfHumanPlayers();
             CreatePlayerObjects(numberOfHumanPlayers);
+            
+
         }
     }
 }
