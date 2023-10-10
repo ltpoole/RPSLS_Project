@@ -62,19 +62,19 @@ namespace RPSLS
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
             Console.WriteLine("Player One, what is your name?");
-            string playerName = Console.ReadLine();
-            this.playerOne = new HumanPlayer(playerName);
-            this.playerTwo = new HumanPlayer(playerName);
+            string nameInput = Console.ReadLine();
+            this.playerOne = new HumanPlayer(nameInput);
+            this.playerTwo = new HumanPlayer(nameInput);
 
             if (numberOfHumanPlayers == 1)
             {
-                this.playerOne = new HumanPlayer("");
+                this.playerOne = new HumanPlayer(nameInput);
                 this.playerTwo = new ComputerPlayer("CPU");
             }
             else
             {
-                this.playerOne = new HumanPlayer("");
-                this.playerTwo = new HumanPlayer("");
+                this.playerOne = new HumanPlayer(nameInput);
+                this.playerTwo = new HumanPlayer(nameInput);
             }
 
         }
